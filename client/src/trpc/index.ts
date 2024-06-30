@@ -131,7 +131,7 @@ export const appRouter = router({
       })
 
       if (!file) throw new TRPCError({ code: 'NOT_FOUND' })
-
+        // @ts-ignore
       const messages = await db.message.findMany({
         take: limit + 1,
         where: {
